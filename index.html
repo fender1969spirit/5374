@@ -7,7 +7,7 @@
     <meta property="og:url" content="http://kanazawa.5374.jp/" />
     <meta property="og:description" content="Code for Kanazawaの作った5374.jpは貴方の地域で、いつ、どのゴミが回収されるのか、簡単に知る事ができます。" />
     <meta property="og:image" content="http://kanazawa.5374.jp/img/ogp.png" />
-    <meta name="Keywords" content="金沢市,5374,ごみ,ゴミ収集日" />
+    <meta name="Keywords" content="江別市,5374,ごみ,ゴミ収集日" />
     <meta name="description" content="Code for Kanazawaの作った5374.jpは貴方の地域で、いつ、どのゴミが回収されるのか、簡単に知る事ができます。" />
     <title>5374(ｺﾞﾐﾅｼ).jp</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -18,43 +18,225 @@
     <link href="css/custom.css" rel="stylesheet" media="screen" />
   </head>
   <body>
-  <style id="accordion-style" type="text/css"></style>
+   
+<!-- <header>
+   <center><h1>試運転中</h1></center>
+   <p>稼動については、江別市ホームページをご覧ください。</p>
+<p>江別市ホームページ「ごみとリサイクル」<br />
+<a href="https://www.city.ebetsu.hokkaido.jp/site/gomi/" style=" color: #FF0000;text-decoration: underline;">https://www.city.ebetsu.hokkaido.jp/site/gomi/</a>
+              </p>
+  </header> -->
+
+
+ <style id="accordion-style" type="text/css"></style>
   <div id="accordion"></div>
   <select class="form-control" id="select_area"></select>
-  <div class="accordion" id="accordion3">
+
+   <div class="accordion" id="accordion3">
     <div class="accordion-group-top">
-      <div class="accordion-heading">
-        <a class="accordion-toggle-top" href="http://www.gomisaku.jp/0073/">ごみ分別辞典</a>
+     <div class="accordion-heading">
+          <a class="accordion-toggle-top" href="http://www.gomisaku.jp/0073/">ごみ分別辞典</a>
+          <!-- <a href="http://www.gomisaku.jp/0073/" style="font-size: 180%; color: #000000;"><br/>ごみ分別辞典</a> -->
+      </div>
+      <!-- <div id="collapse1_0" class="accordion-body collapse">
+        <div class="accordion-inner">
+          <div id="help">
+
+            <p>ごみの分別は、ごみ分別辞典「ごみサク」で検索することができます。</p>
+            <p>江別市ごみ分別辞典「ごみサク」<br/>
+            <a href="http://www.gomisaku.jp/0073/" style=" color: #FF0000;text-decoration: underline;">江別市ごみ分別辞典</a></p>
+
+          </div>
         </div>
       </div>
-        <a class="accordion-toggle-top" data-toggle="collapse" data-parent="#accordion3" href="#collapse3_0">5374.jpについて</a>
+    </div> -->
+  </div>
+  
+      <div class="accordion" id="accordion3">
+    <div class="accordion-group-top">
+      <div class="accordion-heading">
+        <a class="accordion-toggle-top" data-toggle="collapse" data-parent="#accordion3" href="#collapse2_0">ごみの出し方</a>
+      </div>
+      <div id="collapse2_0" class="accordion-body collapse">
+        <div class="accordion-inner">
+          <div id="help">
+
+            <p>ごみや資源物は､決められた収集日当日の朝9時までにごみステーションに出してください｡</p>
+            <p>前日の夜や時間後のごみ出しは、ごみの散乱や、回収もれの原因となりますのでやめましょう。</p>
+
+            <h3>分別の種類</h3>
+            <p>家庭から出るごみは、燃やせるごみ、燃やせないごみ、危険ごみ、資源物に分けて、収集しています。</p>
+
+            <h3>燃やせるごみ、燃やせないごみの出し方</h3>
+            <p>「指定ごみ袋」に入れて出してください。袋に入らないごみで、長さが1m以下のものは「ごみ処理券」をはって出してください。</p>
+            <p>長さが1mを超えるものは、「大型ごみ」として出してください。</p>
+
+            <h3>危険ごみ、資源物の出し方</h3>
+            <p>品目ごとに、中身の見える袋に入れて、出してください。</p>
+
+            <h3>さらに詳しい分別・出し方について</h3>
+            <p>江別市「分別の手引き」をご覧ください。</p>江別市 ごみとリサイクルのページ 「分別の手引き」<br />
+            <a href="http://www.city.ebetsu.hokkaido.jp/site/gomi/2021.html" style=" color: #FF0000;text-decoration: underline;">http://www.city.ebetsu.hokkaido.jp/site/gomi/2021.html</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    <div class="accordion" id="accordion3">
+    <div class="accordion-group-top">
+      <div class="accordion-heading">
+        <a class="accordion-toggle-top" data-toggle="collapse" data-parent="#accordion3" href="#collapse3_0">大型ごみ</a>
       </div>
       <div id="collapse3_0" class="accordion-body collapse">
         <div class="accordion-inner">
           <div id="help">
-ゴミの問題は、どの地域でも深刻になりつつあります。
-Code for Kanazawaでは、先ずは正しいゴミの捨て方に注目しました。
-目的と使い方は、とてもシンプルです。
+            <p>「大型ごみ」とはタンスやベットなどの、1辺の長さが1mを超えるものや、石油ストーブなどの発火の危険性がある指定品目です。</p>
+
+            <h3>大型ごみの出し方</h3>
+            <p>大型ごみは戸別有料収集です。大型ごみ受付センターに電話で申し込み、大型ごみ処理シールを貼り、収集日に指定された場所に出してください。</p>
+
+            <h3>大型ごみ受付センター</h3>
+            <p>受付日時<br />月～金曜日（年末年始を除く）午前9時～午後5時</p>
+            <p>電話番号<br />011-380-6000</p>
+            <p>FAX番号<br />011-385-7134</p>
+
+            <h3>さらに詳しい分別・出し方について</h3>
+            <p>江別市「分別の手引き」をご覧ください。</p>江別市 ごみとリサイクルのページ 「分別の手引き」<br />
+            <a href="http://www.city.ebetsu.hokkaido.jp/site/gomi/2021.html" style=" color: #FF0000;text-decoration: underline;">http://www.city.ebetsu.hokkaido.jp/site/gomi/2021.html</a></p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+   <div class="accordion" id="accordion3">
+    <div class="accordion-group-top">
+      <div class="accordion-heading">
+        <a class="accordion-toggle-top" data-toggle="collapse" data-parent="#accordion3" href="#collapse4_0">市で収集しないごみ</a>
+      </div>
+      <div id="collapse4_0" class="accordion-body collapse">
+        <div class="accordion-inner">
+          <div id="help">
+            <p>下記の品目は、市で収集いたしません。</p>
+            
+            <h3>市の施設で処理が困難なもの</h3>
+            <p>バッテリー、ゴムタイヤ、土砂、石、火薬、灯油類、薬品類、大型健康器具（モーター付き）、ブラウン管式ワープロ、ピアノ、木製の臼、耐火金庫、発電機、除雪機、草刈機、消火器、オートバイなど</p>
+
+            <h3>特定家電製品</h3>
+            <p>テレビ（ブラウン管・液晶・プラズマ）、冷蔵庫、冷凍庫、洗濯機、衣類乾燥機、エアコン</p>
+
+            <h3>在宅医療で出たごみ</h3>
+            <p>注射針、注射器、注射筒、針付きのチューブ類など</p>
+
+            <h3>パソコン類</h3>
+            <p>デスクトップパソコン本体、ブラウン管ディスプレイ、液晶ディスプレイ、ノートパソコン</p>
+
+            <h3>上記の品目の処理方法について</h3>
+            <p>江別市「分別の手引き」をご覧ください。</p>江別市 ごみとリサイクルのページ 「分別の手引き」<br />
+            <a href="http://www.city.ebetsu.hokkaido.jp/site/gomi/2021.html" style=" color: #FF0000;text-decoration: underline;">http://www.city.ebetsu.hokkaido.jp/site/gomi/2021.html</a></p>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion" id="accordion3">
+    <div class="accordion-group-top">
+      <div class="accordion-heading">
+        <a class="accordion-toggle-top" data-toggle="collapse" data-parent="#accordion3" href="#collapse5_0">無料回収</a>
+      </div>
+      <div id="collapse5_0" class="accordion-body collapse">
+        <div class="accordion-inner">
+          <div id="help">
+
+            <h3>集団資源回収</h3>
+            <p>自治会やPTAなどで、新聞紙、雑誌、ダンボール、紙パック、紙箱類、びん、缶、金属類、古着・古布などを無料で回収しています。</p>
+            <p>回収品目や回収日は各団体が独自で決めていますので、詳しくは各団体の役員などに、お問い合わせください。</p>
+
+            <p>江別市ホームページ「集団資源回収」<br />
+            <a href="https://www.city.ebetsu.hokkaido.jp/site/gomi/2047.html" style=" color: #FF0000;text-decoration: underline;">https://www.city.ebetsu.hokkaido.jp/site/gomi/2047.html</a>
+            </p>
+            
+            <h3>古着・古布回収ボックス</h3>
+            <p>市役所本庁舎などに設置している回収ボックスで、古着や古布を無料回収し、中古衣料や工業用ウェスとして活用しています。</p>
+
+            <p>江別市ホームページ「古着・古布のリサイクル」<br />
+            <a href="https://www.city.ebetsu.hokkaido.jp/site/gomi/17677.html" style=" color: #FF0000;text-decoration: underline;">https://www.city.ebetsu.hokkaido.jp/site/gomi/17677.html</a>
+            </p>
+
+            <h3>小型家電回収ボックス</h3>
+            <p>市役所本庁舎などに設置している回収ボックスで小型家電を無料回収し、貴金属やレアメタルなどをリサイクルしています。</p>
+
+            <p>江別市ホームページ「小型家電のリサイクル」<br />
+            <a href="https://www.city.ebetsu.hokkaido.jp/site/gomi/21039.html" style=" color: #FF0000;text-decoration: underline;">https://www.city.ebetsu.hokkaido.jp/site/gomi/21039.html</a>
+            </p>
+
+            <h3>江別市リサイクルバンク</h3>
+            <p>家庭で不用になった家具などを無料で提供していただき、必要とする市民の方に再利用していただいています。</p>
+            
+            <p>江別市ホームページ「リサイクルバンク」<br />
+            <a href="https://www.city.ebetsu.hokkaido.jp/site/gomi/2039.html" style=" color: #FF0000;text-decoration: underline;">https://www.city.ebetsu.hokkaido.jp/site/gomi/2039.html</a>
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion" id="accordion3">
+    <div class="accordion-group-top">
+      <div class="accordion-heading">
+        <a class="accordion-toggle-top" data-toggle="collapse" data-parent="#accordion3" href="#collapse6_0">アプリの使い方</a>
+      </div>
+      <div id="collapse6_0" class="accordion-body collapse">
+        <div class="accordion-inner">
+          <div id="help">
+
+            <h3>収集地域の設定</h3>
+            <p>お住まいの地域を選択することで、ごみの収集日が自動的に更新されます。</p>
+            <h3>ごみの収集日を調べる</h3>
+            <p>一番近いごみの収集日を上から順に表示しています。</p>
+            <h3>捨てることができるごみを調べる</h3>
+            <p>分別の種類をタップすると、捨てることが可能なごみの一覧を見ることができます。</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion" id="accordion3">
+    <div class="accordion-group-top">
+      <div class="accordion-heading">
+        <a class="accordion-toggle-top" data-toggle="collapse" data-parent="#accordion3" href="#collapse7_0">5374.jp えべつ について</a>
+      </div>
+      <div id="collapse7_0" class="accordion-body collapse">
+        <div class="accordion-inner">
+          <div id="help">
+
+<p>Code for Kanazawaによって開発された5374.jpを、江別市廃棄物対策課が改変して「5374.jp えべつ」を作成しました。</p>
+
+<p>江別市ホームページ「ごみとリサイクル」<br />
+<a href="https://www.city.ebetsu.hokkaido.jp/site/gomi/" style=" color: #FF0000;text-decoration: underline;">https://www.city.ebetsu.hokkaido.jp/site/gomi/</a>
+              </p>
+             
             <h2>目的</h2>
-「いつ、どのゴミが収集されているのか？」
-例えばお引っ越しをされた場合や、新しく金沢市に住むことになった時、このアプリを使えば、すぐに分かるようにデザインされています。
-            <h2>使い方</h2>
-            <h3>色でゴミのジャンルを表示</h3>
-            <p>一番近いゴミの日とジャンルを上から順に表示しています。</p>
-            <h3>捨てる事が可能なゴミ</h3>
-            <p>ゴミのジャンルをタップすると、捨てることが可能なゴミの一覧を見ることができます</p>
-            <h3>設定</h3>
-            <p>お住まいの地域を選択することで、ゴミ収集日が自動的に更新されます。</p>
+「いつ、どのごみが収集されているのか？」
+例えばお引っ越しをされた場合や、新しく江別市に住むことになった時、このアプリを使えば、すぐに分かるようにデザインされています。
+
             <div id="caption">
-              <h4>提供されるゴミ情報について</h4>
-              <p>金沢市が公開している<a target="_blank" href="http://www4.city.kanazawa.lg.jp/11010/opendata/other/kankyou.html">オープンデータ</a>を利用・変換を行い、アプリに実装しました。</p>
               <h4>ライセンスについて</h4>
               <p>本アプリの著作権はCode for Kanazawaに帰属します。</p>
             </div>
             <div id="cfk">
+             
               <h3>Code for Kanazawaについて</h3>
               <p>コードで、世界をHappyに。<br />
-各地域には様々な課題があり、　解決するためのコミュニティ（団体）も数多くあります。<br />
+各地域には様々な課題があり、解決するためのコミュニティ（団体）も数多くあります。<br />
 課題の中には、ITやデザインの力で解決できるものも多くありますが、全てのコミュニティにそのスキル（技術）が備わっているわけではありません。<br /><br />
 Code for Kanazawa（CfK）は、市民の課題を集め、その課題を整理・分析した上で、メンバーが実際に課題解決となるソフトウェアやハードウェア（仕組みや方法）を開発します。<br />
 私たちは、デザインをして、ソフトウェアコードを書き、課題を解決するサービスを完成させるのです。さらに、そのサービスを提供し続ける力も持ちます。<br /><br />
@@ -68,6 +250,7 @@ CfKは市民のための組織です。行政や民間企業の影響を受け�
       </div>
     </div>
   </div>
+  
   <!-- JavaScript plugins (requires jQuery) -->
   <script src="js/jquery-1.10.2.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
